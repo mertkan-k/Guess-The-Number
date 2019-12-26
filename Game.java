@@ -9,9 +9,9 @@ public class Game {
 	
 	private boolean isCompleted;
 	private String number;
-	private Vector<String> estimates;
+	private int estimateCount;
 	
-	public int getEstimateCount() {return estimates.size();}
+	public int getEstimateCount() {return estimateCount;}
 	public boolean IsCompleted() {return isCompleted;}
 	
 	Game(int maxLen){
@@ -32,8 +32,6 @@ public class Game {
 			}
 		}
 		
-		estimates = new Vector<String> ();
-		
 	}
 	
 	public String Guess(String s) {
@@ -47,7 +45,7 @@ public class Game {
 		
 		String ret = "";
 		
-		estimates.add(s);
+		estimateCount++;
 		
 		int succesPos = 0, wrongPos = 0;
 		for (int i = 0; i < s.length(); i++) {

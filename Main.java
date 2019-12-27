@@ -18,8 +18,8 @@ public class Main {
 			while (!g.IsCompleted()) {
 				System.out.print("Enter your guess: ");
 				String guess = s.next();
-				
-				System.out.println(g.Guess(guess));
+
+				System.out.println(guess + " -> " + g.Guess(guess));
 			}
 
 			System.out.println("Congratulations! Total estimates: " + g.getEstimateCount());

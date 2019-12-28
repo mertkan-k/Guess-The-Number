@@ -36,13 +36,22 @@ public class Game {
 	
 	public String Guess(String s) {
 		if (isCompleted) {
-			return "";
+			return "Game already completed!";
 		}
 		
 		if (s.length() != number.length()) {
-			return "";
+			return "Invalid quess!";
 		}
 		
+		// For ignore 111 etc.
+		for (int i = 0; i < s.length(); i++) {
+			for (int j = i+1; j < s.length(); j++) {
+				if (s.charAt(i) == s.charAt(j)){
+					return "Invalid quess!";
+				}
+			}
+		}
+
 		String ret = "";
 		
 		estimateCount++;

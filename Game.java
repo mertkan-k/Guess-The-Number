@@ -43,6 +43,7 @@ public class Game {
 			return "Invalid quess!";
 		}
 		
+		// For ignore 111 etc.
 		for (int i = 0; i < s.length(); i++) {
 			for (int j = i+1; j < s.length(); j++) {
 				if (s.charAt(i) == s.charAt(j)){

@@ -35,19 +35,19 @@ public class Game {
 	}
 	
 	public String Guess(String s) {
-		if (isCompleted) {
+		if (IsCompleted()) {
 			return "Game already completed!";
 		}
 		
 		if (s.length() != number.length()) {
-			return "Invalid quess!";
+			return "Invalid guess!";
 		}
 		
 		// For ignore 111 etc.
 		for (int i = 0; i < s.length(); i++) {
 			for (int j = i+1; j < s.length(); j++) {
 				if (s.charAt(i) == s.charAt(j)){
-					return "Invalid quess!";
+					return "Invalid guess!";
 				}
 			}
 		}
